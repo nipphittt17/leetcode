@@ -1,8 +1,9 @@
 package easyQuestion.src;
 
+//1608. Special Array With X Elements Greater Than or Equal X
 public class specialArray {
 
-    public static int findSpecial(int[] nums) {
+    public static int specialArray(int[] nums) {
         
         int begin = 0;
         int last = nums.length;
@@ -49,15 +50,15 @@ public class specialArray {
 
     public static void main(String[] args) {
             // int[] test1 = {3,5};
-            // int out1 = findSpecial(test1);
+            // int out1 = specialArray(test1);
             // System.out.println(out1);
 
             int[] test2 = {0,4,3,0,4};
-            int out2 = findSpecial(test2);
+            int out2 = specialArray(test2);
             System.out.println(out2);
 
             // int[] test3 = {0,0};
-            // int out3 = findSpecial(test3);
+            // int out3 = specialArray(test3);
             // System.out.println(out3);
 
     }

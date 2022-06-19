@@ -29,6 +29,24 @@ public class specialArray {
         
         return ans;
     }
+
+    // public static int findSpecial_loop(int[] nums) {
+        
+    //     Arrays.sort(nums);   
+    //     //loop through nums
+    //     for(int i = 1 ; i <= nums.length ; i++){
+            
+    //         //find num that >= i 
+    //         int count = 0;
+    //         for(int j = 0  ; j < nums.length ; j++){
+    //             if(nums[j] >= i) count++;
+    //         }
+    //         //if count = i -> return i
+    //         if(count == i) return i;
+    //     }    
+    //     return -1;   
+    // }
+
     public static void main(String[] args) {
             // int[] test1 = {3,5};
             // int out1 = findSpecial(test1);

@@ -1,4 +1,4 @@
-package easyQuestion.src;
+// package easyQuestion.src;
 
 //1608. Special Array With X Elements Greater Than or Equal X
 public class specialArray {

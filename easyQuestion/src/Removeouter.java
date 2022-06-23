@@ -1,4 +1,4 @@
-package easyQuestion.src;
+// package easyQuestion.src;
 
 //1021. Remove Outermost Parentheses
 

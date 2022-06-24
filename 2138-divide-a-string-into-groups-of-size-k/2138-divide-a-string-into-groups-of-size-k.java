@@ -5,21 +5,18 @@ class Solution {
             s = s + fill;
         } 
         
-        String[] output = new String[s.length()/k];
-        int out = 0;
+        List<String> output = new ArrayList<String>();
         String temp = "";
 
         for(int i = 0 ; i< s.length() + s.length()%k ; i++){
             temp = temp + s.charAt(i);
 
             if((i+1)%k == 0) {
-                output[out] = temp;
+                output.add(temp);
                 temp = "";
-                out++;
             }
         }
 
-
-        return output;
+        return output.toArray(new String[0]);
     }
 }

@@ -1,7 +1,6 @@
 class Solution {
     public void rotate(int[] nums, int k) {
-        k = k % nums.length; //in case that k > nums.size -> k will be the leftover
-        
+        k = k % nums.length; //in case that k > nums.size -> k will be the leftover 
         reverse(0, nums.length-1, nums); //all
         reverse(0, k-1, nums); //left side
         reverse(k, nums.length-1, nums); //right side

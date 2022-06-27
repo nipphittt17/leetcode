@@ -9,13 +9,16 @@ class Solution {
     
     public void reverse(int left, int right, int[] arr){
         while(left < right){
-            int temp = arr[left];
-            arr[left] = arr[right];
-            arr[right] = temp;
-            
+            swap(left,right,arr);
             left++;
             right--;
         }
+    }
+    
+    public void swap(int a, int b, int[] arr){
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
     
 }

@@ -15,20 +15,3 @@ class Solution {
         
     }
 }
-
-//                 int h1 = points[i][0];
-//                 int h2 = points[i+1][0];
-//                 int v1 = points[i][1];
-//                 int v2 = points[i+1][1];
-                
-//                 //horizon
-//                 time = time + (int)Math.abs(h2 - h1);
-                
-                    
-//                 //vertical
-//                 if(Math.abs(v2-v1) > Math.abs(h2-h1)) {
-//                     v1 = h2;     
-//                     time = time + (v2-v1);
-//                 }   
-
-//         }

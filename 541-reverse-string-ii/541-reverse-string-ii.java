@@ -1,16 +1,13 @@
 class Solution {
     public String reverseStr(String s, int k) {
         
-        // if(s.length() < k) return reverseK(s);
-        
         StringBuilder out = new StringBuilder();
         
         String sub = "";
         boolean sw = true;
         
         for(int i = 0 ; i < s.length() ; i++){
-            sub = sub + (s.charAt(i)); 
-            
+            sub = sub + (s.charAt(i));     
             if((i+1)%k == 0){
                 if(sw == true){
                     out.append(reverseK(sub));

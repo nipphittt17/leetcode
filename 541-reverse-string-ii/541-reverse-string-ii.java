@@ -1,7 +1,7 @@
 class Solution {
     public String reverseStr(String s, int k) {
         
-        if(s.length() < k) return reverseK(s);
+        // if(s.length() < k) return reverseK(s);
         
         StringBuilder out = new StringBuilder();
         

@@ -18,6 +18,7 @@ class Solution {
     public int sumEvenGrandparent(TreeNode root) {
         
         if(root == null) return sum;
+        if(root.left == null && root.right == null) return sum;
         
         if(root.val%2 == 0){
             sum = sum + sumGrandkids(root);

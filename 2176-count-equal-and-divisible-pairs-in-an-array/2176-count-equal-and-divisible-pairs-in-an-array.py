@@ -2,12 +2,16 @@ class Solution:
     def countPairs(self, nums: List[int], k: int) -> int:
         
         out = 0
+        digits = {}
         
-        for i in range(len(nums)):
-            if(nums.count(nums[i]) > 1):
-                for j in range(i+1,len(nums)):
-                    if(nums[i] == nums[j] and (i*j)%k == 0):
-                        out += 1
+        for i,x in enumerate(nums):
+            if x in digits:     
+                for index in digits[x]:
+                    if (index*i)%k == 0:
+                        out += 1    
+                digits[x].append(i)
+            else:
+                digits[x] = [i]
                 
         return out    
             

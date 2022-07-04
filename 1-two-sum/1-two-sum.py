@@ -20,7 +20,8 @@ class Solution:
                         out.append(index)    
                         out.append(i)
                         break
-                        
+            if len(out) == 2:
+                break
         return out        
                 
                 

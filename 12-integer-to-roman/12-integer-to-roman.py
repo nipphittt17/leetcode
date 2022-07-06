@@ -11,11 +11,6 @@ class Solution:
         }
         
         out = ""
-     
-        for roman in romans:
-            if num == roman:
-                return romans[roman]
-            
             
         num_str = str(num)   
         length = len(num_str)

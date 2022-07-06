@@ -1,21 +1,21 @@
 class Solution:
+    
+    first = 0
+    sec = 1
+     
     def fib(self, n: int) -> int:
+       
+        if n == 0 or n == 1:
+            return n
+        if n == 2:
+            return self.first + self.sec  
         
-        first = 0
-        sec = 1
+        temp = self.first + self.sec
+        self.first = self.sec
+        self.sec = temp
         
-        if n == 0:
-            return first
-
-        out = 0
-        n -= 2
-        
-        while(n > 0):
-            temp = first + sec
-            first = sec
-            sec = temp
-            n-=1
+        return(self.fib(n-1))
             
-        return first + sec   
+        
             
         

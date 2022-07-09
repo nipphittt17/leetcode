@@ -6,7 +6,7 @@
 class Solution:
     
     output = []
-    first = False
+    count = 0
     
     def list_to_link(self, lst):
         """Takes a Python list and returns a Link with the same elements.
@@ -17,9 +17,9 @@ class Solution:
     
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         
-        if self.first == False:
+        if self.count == 0:
             self.output = []
-            self.first = True
+            self.count += 1
             
         if list1 == None and list2 == None:
             return list1

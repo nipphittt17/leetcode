@@ -24,7 +24,7 @@ class Solution:
         if list1 == None and list2 == None:
             return list1
         
-        if list1 == None:
+        elif list1 == None:
             self.output.append(list2.val)
             if list2.next != None:
                 self.mergeTwoLists(list1,list2.next)

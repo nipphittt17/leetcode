@@ -1,13 +1,4 @@
 class Solution:
-    
-    def maxWidth(self, height: List[int]):
-        max = 0
-        for i,x in enumerate(height):
-            if x > max:
-                max = x
-                index = i
-        return max,index
-        
         
     def maxArea(self, height: List[int]) -> int:
         

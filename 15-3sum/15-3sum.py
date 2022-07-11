@@ -7,8 +7,6 @@ class Solution:
         for i,x in enumerate(nums):
             sum2 = 0 - x
             triplet = []
-            maps = {}
-            maps[x] = i
             
             left = i+1
             right = len(nums)-1
@@ -17,8 +15,6 @@ class Solution:
                 if nums[left] + nums[right] == sum2:
                     
                     triplet = [x,nums[left],nums[right]]
-                    maps[nums[left]] = left
-                    maps[nums[right]] = right
                     
                     if triplet not in triplets:
                         triplets.append(triplet)   
@@ -29,8 +25,6 @@ class Solution:
                     left+=1
                 else:
                     right-=1
-                # if len(triplet) == 3:
-                #     triplet = []        
                 
         return triplets
 

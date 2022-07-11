@@ -5,18 +5,22 @@ class Solution:
         triplets = []
         
         for i,x in enumerate(nums):
-            triplet = []
-            triplet.append(x)
             sum2 = 0 - x
+            triplet = []
+            maps = {}
+            maps[x] = i
             
             left = i+1
             right = len(nums)-1
             
             while left<right:
                 if nums[left] + nums[right] == sum2:
-                    triplet.append(nums[left])
-                    triplet.append(nums[right])              
-                    if len(triplet) == 3 and triplet not in triplets:
+                    
+                    triplet = [x,nums[left],nums[right]]
+                    maps[nums[left]] = left
+                    maps[nums[right]] = right
+                    
+                    if triplet not in triplets:
                         triplets.append(triplet)   
                         triplet = [x]
                     left+=1
@@ -25,8 +29,8 @@ class Solution:
                     left+=1
                 else:
                     right-=1
-                if len(triplet) == 3:
-                    triplet = [x]        
+                # if len(triplet) == 3:
+                #     triplet = []        
                 
         return triplets
 

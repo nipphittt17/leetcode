@@ -5,15 +5,17 @@ class Solution:
         triplets = []
         
         for i,x in enumerate(nums):
-            sum2 = 0 - x
             triplet = []
+            triplet.append(x)
+            sum2 = 0 - x
             
             left = i+1
             right = len(nums)-1
             
             while left<right:
                 if nums[left] + nums[right] == sum2:
-                    triplet = [x,nums[left],nums[right]]
+                    triplet.append(nums[left])
+                    triplet.append(nums[right])              
                     if len(triplet) == 3 and triplet not in triplets:
                         triplets.append(triplet)   
                         triplet = [x]
@@ -24,7 +26,7 @@ class Solution:
                 else:
                     right-=1
                 if len(triplet) == 3:
-                    triplet = []        
+                    triplet = [x]        
                 
         return triplets
 

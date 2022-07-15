@@ -6,19 +6,17 @@ class Solution:
         
         i = 0
         length = len(plants)
+        
         while i < length: 
             if water >= plants[i]:
-                if plants[i] != 0:
-                    water -= plants[i]
-                    plants[i] = 0
+                water -= plants[i]
                 step+=1 
+                i+=1
                 
             else:
-                step += i
+                step += i*2
                 water = capacity
-                i = -1
-            i+=1
-            
+
         return step
             
         

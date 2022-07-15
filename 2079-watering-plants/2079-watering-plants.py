@@ -6,13 +6,11 @@ class Solution:
         
         i = 0
         length = len(plants)
-        passed = [False for i in range(length)] 
-        
         while i < length: 
             if water >= plants[i]:
-                if passed[i] == False:
+                if plants[i] != 0:
                     water -= plants[i]
-                    passed[i] = True
+                    plants[i] = 0
                 step+=1 
                 
             else:

@@ -15,7 +15,8 @@ class Solution:
             if i>=len(nums):
                 break
         if count == 1:
-            return [output[0],output[0]]
+            output[1] = output[0]
+            return output
         output[1] = output[0]+count-1
         return output
 

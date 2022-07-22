@@ -1,11 +1,14 @@
 class Solution:
     def findKthPositive(self, arr: List[int], k: int) -> int:
         
-        missing = [0]
+        missing = []
         maxNum = max(arr)
-        for i in range(maxNum):
-            if i+1 not in arr:
-                missing.append(i+1)
+        
+        for i in range(maxNum+1):
+            missing.append(i)
+    
+        for num in arr:
+            missing.remove(num)
         
         length = len(missing)
         left = 0

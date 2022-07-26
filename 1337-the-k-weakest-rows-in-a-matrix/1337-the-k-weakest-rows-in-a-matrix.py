@@ -6,8 +6,8 @@ class Solution:
         for i,m in enumerate(mat):
             soldier[i] = m.count(1)
         
-        weakestList = list(sorted(soldier, key=soldier.get))
-        return weakestList[:k]
+        output = list(sorted(soldier, key=soldier.get))
+        return output[:k]
 
         
         
